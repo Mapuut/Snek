@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>Snek</title>
+
+    <meta name="description" content="I bet my snake is bigger than yours.">
+    <meta name="keywords" content="Snake, Arcade, Video game, Game, 2D, Retro">
+    <meta name="author" content="github.com/Mapuut">
+
+    <style>body {opacity: 0; transition: opacity 0.2s;}</style>
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="ui.js"></script>
+    <script defer src="objects.js"></script>
+    <script defer src="snake.js"></script>
+    
+</head>
+<body id="body">
+    <div class="stats">
+
+        <div class="stats-hp">
+            <img class="icon" src="icons/heart.svg">
+            <div class="stats-hp-bar-container">
+                <div id="hp-bar" class="stats-hp-bar"></div>
+                <div id="hp" class="stats-hp-bar-text">30 / 30</div>
+                
+            </div>
+        </div>
+
+        <div class="stats-score">
+            <div id="score" class="stats-score-text">0</div>
+            <img class="icon" src="icons/snake.svg">
+        </div>
+
+    </div>
+
+    <div class="game-container">
+        <div id="end-screen" class="end-screen">
+            <div class="end-screen-title">Game Over</div>
+            <div class="end-screen-subtitle">Your snake is fucking dead. Learn to play sucker.</div>
+            <div style="display:flex; margin-top: 40px">
+                <div class="end-screen-score">
+                    <img class="icon" src="icons/snake.svg">
+                    <div id="end-screen-score">96</div>
+                </div>
+                <div onclick="playAgain()" class="end-screen-continue"><img class="icon" src="icons/refresh.svg"></div>
+            </div>
+
+        </div>
+        <canvas id="game" class="game" width="600" height="600"></canvas>
+    </div>
+
+    <div class="instructions-container">
+        <div>Controls - <b>AWSD</b> or <b>Arrow Keys</b></div>
+        <div>by <b>github.com/Mapuut</b></div>
+    </div>
+</body>
+</html>
