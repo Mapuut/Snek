@@ -187,6 +187,7 @@ function checkRickRoll() {
 }
 
 function initiateRickRoll() {
+    //TODO: add try cath in case user doesnt give autoplay permissions
     if(rickRollActivated) return;
     rickRollActivated = true;
     let rickRoll = new Audio(parseInt(Math.random() * 20) === 4 ? 'sounds/rickroll2.mp3' : 'sounds/rickroll.mp3');

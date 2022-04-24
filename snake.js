@@ -145,6 +145,7 @@ function generateMap() {
 }
 
 function addKeyboard() {
+    //TODO: add mobile support with joistick
     document.addEventListener('keydown', function(event) {
         if     ([37, 65].includes(event.keyCode)) direction = directions.LEFT;
         else if([38, 87].includes(event.keyCode)) direction = directions.UP;
